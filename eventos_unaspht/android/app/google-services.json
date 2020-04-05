@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "142805136807",
+    "firebase_url": "https://eventos-unasp-61d41.firebaseio.com",
+    "project_id": "eventos-unasp-61d41",
+    "storage_bucket": "eventos-unasp-61d41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:142805136807:android:604da892bbdc8c51d6b282",
+        "android_client_info": {
+          "package_name": "com.example.eventos_unaspht"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "142805136807-bmtthi1aeg6arfcc9c6ddjlpbcg54sb1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCES6MepiEgPaQltZpRaw_3w7bjoet218w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "142805136807-bmtthi1aeg6arfcc9c6ddjlpbcg54sb1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
