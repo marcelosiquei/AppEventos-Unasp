@@ -9,7 +9,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 //INFORMAÇÕES DE CADASTRO
 
-
 class BasicInfoStep extends StatefulWidget {
   @override
   _BasicInfoStepState createState() => _BasicInfoStepState();

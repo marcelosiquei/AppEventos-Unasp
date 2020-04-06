@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
-//ESQUECI MINHA SENHA
+//TELA ESQUECI MINHA SENHA
 
 class RecoverPassPage extends StatefulWidget {
   @override
@@ -15,7 +15,7 @@ class RecoverPassPage extends StatefulWidget {
 
 class _RecoverPassPageState extends State<RecoverPassPage> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {    
     Color orange = Theme.of(context).secondaryHeaderColor;
     return Scaffold(
       appBar: AppBar(

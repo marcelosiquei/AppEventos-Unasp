@@ -117,6 +117,7 @@ class _SigninPageState extends State<SigninPage>
                   animation: animTransformEmail,
                   child: CustomTextField(
                     hintText: "E-mail",
+                    autofocus: true,                    
                     icon: FontAwesomeIcons.solidEnvelope,
                     isPassword: false,
                     isBlue: true,

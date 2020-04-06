@@ -15,13 +15,13 @@ class CategoryStep extends StatefulWidget {
 class _CategoryStepState extends State<CategoryStep> {
   @override
   Widget build(BuildContext context) {
+    FocusScope.of(context).requestFocus(FocusNode());
     Color orange = Theme.of(context).secondaryHeaderColor;
     SignupBloc signupBloc = LoginModule.to.getBloc<SignupBloc>();
 
     selectMainCategory(CategoryEnum c) {
       signupBloc.mainCategoryController.add(c);
     }
-
     selectSecondaryCategory(CategoryEnum c) {
       signupBloc.secondaryCategoryController.add(c);
     }

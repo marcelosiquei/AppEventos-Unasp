@@ -24,7 +24,8 @@ class _RAStepState extends State<RAStep> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Text("Informe seu RA".toUpperCase(),
-                style: TextStyle(color: Theme.of(context).primaryColor)),
+            style: TextStyle(
+              color: Theme.of(context).primaryColor)),
             SizedBox(height: 20),
             CustomTextField(
               icon: FontAwesomeIcons.idCard,

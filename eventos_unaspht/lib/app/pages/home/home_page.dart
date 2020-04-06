@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:eventos_unaspht/app/pages/home/components/retangular_home_button.dart';
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'components/square_home_button.dart';
@@ -12,8 +11,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-
   @override
   Widget build(BuildContext context) {
     Color orange = Theme.of(context).secondaryHeaderColor;
@@ -21,16 +18,13 @@ class _HomePageState extends State<HomePage> {
     double appWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(icon: Icon(FontAwesomeIcons.powerOff), 
-          onPressed: () async {
-            await _auth.signOut();
-            
-
-            
-        }),
+        leading: IconButton(
+          icon: Icon(FontAwesomeIcons.powerOff), 
+          onPressed: () {}
+        ),
         actions: <Widget>[
           SizedBox(
-            width: 155,
+            width: 15,
           ),
           Padding(
             padding: EdgeInsets.only(right: 20),

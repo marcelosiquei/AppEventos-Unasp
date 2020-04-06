@@ -24,7 +24,7 @@ class _SignupPageState extends State<SignupPage> {
             key: signupBloc.key,
             appBar: AppBar(
               centerTitle: true,
-              title: Text("Cadastro".toUpperCase()),
+              title: Text("cadastroooo".toUpperCase()),
               leading: snapshot.hasData && snapshot.data
                   ? Container()
                   : IconButton(

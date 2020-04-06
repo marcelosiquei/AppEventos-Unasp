@@ -11,13 +11,15 @@ class CustomTextField extends StatelessWidget {
   final Function() onChanged;
 
   CustomTextField( {
-      @required this.hintText,
-      @required this.icon,
-      @required this.isPassword,
-      @required this.isBlue,
-      @required this.controller,
-      @required this.inputType,
-      this.onChanged});
+    @required this.hintText,
+    @required this.icon,
+    @required this.isPassword,
+    @required this.isBlue,
+    @required this.controller,
+    @required this.inputType,
+      this.onChanged, bool autofocus
+  }
+  );
 
   @override
   Widget build(BuildContext context) {

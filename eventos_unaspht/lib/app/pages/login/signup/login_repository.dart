@@ -12,7 +12,7 @@ class LoginRepository {
         email: model.email, 
         password: model.senha)) as FirebaseUser;
         await Firestore.instance
-        .collection("cadastro") 
+        .collection("Eventos-unasp") 
         .document(firebaseUser.uid)
         .setData(model.toJson());
       return null;

@@ -15,6 +15,7 @@ class GenderStep extends StatefulWidget {
 class _GenderStepState extends State<GenderStep> {
   @override
   Widget build(BuildContext context) {
+    FocusScope.of(context).requestFocus(FocusNode());
     Color orange = Theme.of(context).secondaryHeaderColor;
     SignupBloc signupBloc = LoginModule.to.getBloc<SignupBloc>();
 
