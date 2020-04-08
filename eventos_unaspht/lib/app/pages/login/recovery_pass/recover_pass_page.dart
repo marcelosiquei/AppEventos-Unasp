@@ -21,11 +21,11 @@ class _RecoverPassPageState extends State<RecoverPassPage> {
       appBar: AppBar(
           centerTitle: true, title: Text("Esqueci minha senha".toUpperCase())),
       body: Padding(
-        padding: EdgeInsets.only(left: 30, right: 30, top: 30),
+        padding: EdgeInsets.only(left: 30, right: 30, top: 50),
         child: Column(
           children: <Widget>[
             CustomTextField(
-              hintText: "Email",
+              hintText: "Digite seu E-mail",
               icon: FontAwesomeIcons.solidEnvelope,
               isPassword: false,
               isBlue: false,

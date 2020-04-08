@@ -12,7 +12,7 @@ class LoginRepository {
         email: model.email, 
         password: model.senha)) as FirebaseUser;
         await Firestore.instance
-        .collection("Eventos-unasp") 
+        .collection("eventos-unasp") 
         .document(firebaseUser.uid)
         .setData(model.toJson());
       return null;
@@ -20,13 +20,15 @@ class LoginRepository {
       return e?.message ?? "erro";
     }
   }
+
   void signOut() async{
     print(isLoggedIn());
     await FirebaseAuth.instance.signOut();
     firebaseUser = await _auth.currentUser();
   }
 
-  bool isLoggedIn(){ return FirebaseUser != null; 
+  bool isLoggedIn(){ 
+    return FirebaseUser != null; 
   }
 
 }

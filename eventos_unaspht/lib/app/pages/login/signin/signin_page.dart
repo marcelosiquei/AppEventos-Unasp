@@ -28,7 +28,9 @@ class _SigninPageState extends State<SigninPage>
   void initState() {
     super.initState();
     _animationController = AnimationController(
-        duration: Duration(milliseconds: 1000), vsync: this);
+        duration: Duration(
+          milliseconds: 1000), 
+        vsync: this);
   }
 
   @override
@@ -59,11 +61,10 @@ class _SigninPageState extends State<SigninPage>
             parent: _animationController,
             curve: Interval(0, 0.2, curve: Curves.easeIn)));
 
-    animButtonWidth =
-        Tween<double>(begin: MediaQuery.of(context).size.width, end: 50)
-            .animate(CurvedAnimation(
-                parent: _animationController,
-                curve: Interval(0, 0.5, curve: Curves.easeIn)));
+    animButtonWidth = Tween<double>(begin: MediaQuery.of(context).size.width, end: 50).animate(
+        CurvedAnimation(
+            parent: _animationController,
+            curve: Interval(0, 0.5, curve: Curves.easeIn)));
   }
 
   @override

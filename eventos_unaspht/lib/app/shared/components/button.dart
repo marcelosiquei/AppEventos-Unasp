@@ -11,8 +11,8 @@ class Button extends StatefulWidget {
   final double width;
   final bool enabled;
 
-  Button(
-      {@required this.context,
+  Button({
+      @required this.context,
       @required this.onTap,
       @required this.color,
       @required this.text,
@@ -40,7 +40,7 @@ class _ButtonState extends State<Button> {
         child: Text(
           widget.text?.toUpperCase(),
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 14, color: Colors.white),
+          style: TextStyle(fontSize: 18, color: Colors.white),
         ),
       );
     }

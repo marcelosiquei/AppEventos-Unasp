@@ -16,7 +16,6 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     SignupBloc signupBloc = LoginModule.to.getBloc<SignupBloc>();
-
     return StreamBuilder<bool>(
         stream: signupBloc.isLoadingController,
         builder: (context, snapshot) {
@@ -24,7 +23,7 @@ class _SignupPageState extends State<SignupPage> {
             key: signupBloc.key,
             appBar: AppBar(
               centerTitle: true,
-              title: Text("cadastroooo".toUpperCase()),
+              title: Text("CADASTRO".toUpperCase()),
               leading: snapshot.hasData && snapshot.data
                   ? Container()
                   : IconButton(
@@ -51,7 +50,7 @@ class _SignupPageState extends State<SignupPage> {
                       BasicInfoStep(),
                       GenderStep(),
                       CategoryStep(),
-                      RAStep()
+                      RAStep(),
                     ],
                   ),
           );

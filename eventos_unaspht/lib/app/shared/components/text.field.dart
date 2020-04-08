@@ -24,7 +24,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 15),
+      padding: EdgeInsets.symmetric(horizontal: 15), //VALOR ALINHAMENTO DA BORDA
       decoration: BoxDecoration(
           color: isBlue ? Color(0xFF374562) : Colors.grey[200],
           borderRadius: BorderRadius.all(Radius.circular(10))),
@@ -34,18 +34,20 @@ class CustomTextField extends StatelessWidget {
         controller: controller,
         onEditingComplete: onChanged,
         style: TextStyle(
-            fontSize: 14, color: isBlue ? Color(0xFFC2C2C2) : Colors.grey[500]),
+            fontSize: 18, color: isBlue ? Color(0xFFC2C2C2) : Colors.grey[600]),
         decoration: InputDecoration(
+
+          // ESTILO DA FONTE
             hintStyle: TextStyle(
-                color: isBlue ? Color(0xFFC2C2C2) : Colors.grey[500],
-                fontSize: 14),
-            hintText: hintText.toUpperCase(),
+                color: isBlue ? Color(0xFFC2C2C2) : Colors.grey[600],
+                fontSize: 16),
+                hintText: hintText.toString(),
             icon: IconTheme(
               data: IconThemeData(
-                  color: isBlue ? Color(0xFFC2C2C2) : Colors.grey[500]),
+                  color: isBlue ? Color(0xFFC2C2C2) : Colors.grey[600]),
               child: Icon(
                 icon,
-                size: 15,
+                size: 20, // TAMANHO DO ICONE DENTRO DO CAMPO TEXTO
               ),
             ),
             border: InputBorder.none),
