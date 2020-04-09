@@ -19,17 +19,12 @@ class SignupBloc extends BlocBase {
   TextEditingController raController = TextEditingController();
 
   BehaviorSubject<String> genderController = BehaviorSubject<String>();
-  BehaviorSubject<CategoryEnum> mainCategoryController =
-      BehaviorSubject<CategoryEnum>();
-  BehaviorSubject<CategoryEnum> secondaryCategoryController =
-      BehaviorSubject<CategoryEnum>();
+  BehaviorSubject<CategoryEnum> mainCategoryController = BehaviorSubject<CategoryEnum>();
+  BehaviorSubject<CategoryEnum> secondaryCategoryController = BehaviorSubject<CategoryEnum>();
   BehaviorSubject<bool> isLoadingController = BehaviorSubject<bool>();
-  BehaviorSubject<bool> isValidBasicController =
-      BehaviorSubject<bool>.seeded(false);
-  BehaviorSubject<bool> isValidGenderController =
-      BehaviorSubject<bool>.seeded(false);
-  BehaviorSubject<bool> isValidCategoryController =
-      BehaviorSubject<bool>.seeded(false);
+  BehaviorSubject<bool> isValidBasicController = BehaviorSubject<bool>.seeded(false);
+  BehaviorSubject<bool> isValidGenderController = BehaviorSubject<bool>.seeded(false);
+  BehaviorSubject<bool> isValidCategoryController = BehaviorSubject<bool>.seeded(false);
 
   SignupBloc(this.loginRepository) {
     nameController.addListener(isValidBasicForm);
@@ -39,10 +34,10 @@ class SignupBloc extends BlocBase {
     genderController.listen((event) {isValidGenderController.add(event != null);});
     mainCategoryController.listen((value) {isValidCategoryController.add(value != null && value == CategoryEnum.Church);});
     secondaryCategoryController.listen((value) {
-        isValidCategoryController.add(mainCategoryController.value != null &&
-          ((mainCategoryController.value != CategoryEnum.Church &&
-                  secondaryCategoryController.value != null) ||
-                  mainCategoryController.value == CategoryEnum.Church));
+      isValidCategoryController.add(mainCategoryController.value != null &&
+        ((mainCategoryController.value != CategoryEnum.Church &&
+          secondaryCategoryController.value != null) ||
+            mainCategoryController.value == CategoryEnum.Church));
     }
     );
   }
